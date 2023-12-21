@@ -17,7 +17,12 @@ int main(int argc, char **argv) {
   printf("sum of elements = %d\n", sum);
   printArray(arr, n);
 
-  free(arr);
-
-  return 0;
+ double mean= getMean(arr, n);
+  if(mean!= -1){
+  printf("The mean of Numbers as %f\n",mean);
+  }
+  int min = getMin(arr, n);
+  if(min != -1){
+    printf("The minimum as %d\n",min);
+  }
 }
