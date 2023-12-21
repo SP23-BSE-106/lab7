@@ -118,6 +118,17 @@ int getIndexOfMin(const int *arr, int size) {
 
 int getMax(const int *arr, int size) {
   //TODO: implement
+  if(arr == NULL){
+    printf("Invalide array...\n");
+    return -1;
+  }
+  int max = 0;
+  for(int i = 0; i<size; i++){
+    if(arr[i] > max){
+      max = arr[i];
+    }
+  }
+  return max;
 }
 
 int getIndexOfMax(const int *arr, int size) {
