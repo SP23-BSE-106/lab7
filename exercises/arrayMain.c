@@ -26,3 +26,23 @@ int main(int argc, char **argv) {
     printf("The minimum as %d\n",min);
   }
 }
+  int minIndex = getIndexOfMin(arr, n);
+  if(minIndex != -1){
+    printf("The Index of Minimuim number as %d\n",minIndex);
+  }
+  int max = getMax(arr, n);
+  if(max!= -1){
+    printf("Max number in array %d\n",max);
+  }
+  int maxIndex = getIndexOfMax(arr, n);
+  if(maxIndex != -1){
+    printf("The max number index as %d\n",maxIndex);
+  }
+  int threshold = 35;
+  int resultSize = 0;
+  int *filterArray = filterThreshold(arr, n, threshold, &resultSize);
+  if(filterArray != NULL){
+    printf("ThresholdResult: ");
+    for(int i = 0; i<resultSize; i++){
+      printf("%d ",filterArray[i]);
+    }}
