@@ -100,6 +100,20 @@ int getMin(const int *arr, int size) {
 
 int getIndexOfMin(const int *arr, int size) {
   //TODO: implement
+  if(arr == NULL){
+    printf("Invalide array or No Address...\n");
+    return -1;
+  }
+  int min = arr[0];
+  int minIndex = 0;
+  for(int i = 0; i<size; i++){
+    if(arr[i] < min){
+      min = arr[i];
+      minIndex = i;
+
+    }
+  }
+  return minIndex;
 }
 
 int getMax(const int *arr, int size) {
