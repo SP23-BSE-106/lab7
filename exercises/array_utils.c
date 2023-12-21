@@ -174,4 +174,24 @@ int * filterThreshold(const int *arr, int size, int threshold, int *resultSize) 
 
 int **createMultiplicationTable(int n, int m) {
   //TODO: implement
+  if(n == 0 || m == 0){
+    printf("Invalide inpute...\n");
+    return NULL;
+  }
+  int **table = (int **)malloc(n * sizeof(int *));
+  if(table == NULL){
+    printf("Invalide Memory allocation...\n");
+    return NULL;
+  }
+  for(int i = 0; i<n; i++){
+    if(table[i] == NULL){
+      printf("Invalide memory Allocation for Column index...\n");
+    }
+  }
+  for(int i = 0; i<n; i++){
+    for(int j = 0; j<m; j++){
+      table[i][j] = (i + 1) * (j + 1);
+    }
+  }
+  return table;
 }
