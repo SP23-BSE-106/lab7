@@ -38,7 +38,7 @@ int * generateRandomArray(int size) {
   return randomArr;
 }
 
-int getSum(const int *arr, int size) {
+int getSum(int *arr, int size) {
   if(arr == NULL) {
     return 0;
   }
@@ -62,6 +62,10 @@ void freeTable(int **table, int n) {
 
 double getMean(const int *arr, int size) {
   //TODO: implement
+  if(arr == NULL){
+    printf("Invalide address or no address of array\n");
+    return -1;
+  }
 }
 
 int getMin(const int *arr, int size) {
