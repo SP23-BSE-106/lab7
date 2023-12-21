@@ -151,6 +151,25 @@ int getIndexOfMax(const int *arr, int size) {
 
 int * filterThreshold(const int *arr, int size, int threshold, int *resultSize) {
   //TODO: implement
+  if(arr == NULL || resultSize == NULL){
+    printf("Invalide array....");
+    return NULL;
+  }
+  int count = 0;
+  for(int i = 0; i<size; i++){
+    if(arr[i] >= threshold){
+      count++;
+    }
+  } 
+  int *filterArray = (int *)malloc(count * sizeof(int));
+  int index = 0;
+  for(int i = 0; i<size; i++){
+    if(arr[i]>=threshold){
+       filterArray[index++] = arr[i];
+    }
+    *resultSize = count;
+  }
+  return filterArray;
 }
 
 int **createMultiplicationTable(int n, int m) {
