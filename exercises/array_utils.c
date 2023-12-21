@@ -38,7 +38,7 @@ int * generateRandomArray(int size) {
   return randomArr;
 }
 
-int getSum(int *arr, int size) {
+int getSum(const int *arr, int size) {
   if(arr == NULL) {
     return 0;
   }
